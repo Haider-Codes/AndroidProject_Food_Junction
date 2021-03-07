@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutContent5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="8.1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtQuesCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="Q.1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtQues"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="FAQ QUESTION"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutContent6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="8.1"
+        android:layout_below="@+id/linearLayoutContent5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtAnsCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="A.1"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtAns"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="FAQ Answer"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_below="@id/linearLayoutContent6"
+        android:layout_height="1dp"
+        android:background="#000000"/>
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CartActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RelativeContent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_scrollFlags="scroll|enterAlways"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutContent2"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/Toolbar"
+        android:layout_height="56dp"
+        android:weightSum="10"
+        android:background="#ffff"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/txtOrderFromLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/ordering_from"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/txtOrderRestaurant"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="Name Of Restaurant"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/linearLayoutContent2"
+        android:background="@color/colorPrimaryDark"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewDivider"
+        android:layout_margin="5dp" />
+
+    <Button
+        android:id="@+id/btnPlaceOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Place Order"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#ffff"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/RelativeContent1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary" >
+
+
+        <ImageView
+            android:id="@+id/imgConfirmationIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginTop="180dp"
+            android:src="@drawable/confirm_order"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgConfirmationIcon"
+            android:textSize="15sp"
+            android:textColor="#ffff"
+            android:text="Your Order has been Successfully Placed!"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_border"
+            android:text="OK"
+            android:textColor="#ffff"
+            android:layout_marginBottom="10dp" />
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

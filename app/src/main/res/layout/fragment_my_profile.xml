@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MyProfileFragment"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:src="@drawable/profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp" />
+
+
+
+    <TextView
+        android:id="@+id/txtProfileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgProfile"
+        android:background="#ffff"
+        android:layout_marginLeft="15dp"
+        android:textAlignment="center"
+        android:layout_marginRight="15dp"
+        android:textColor="#000000"
+        android:text="John Doe"
+        android:padding="8dp"
+        android:textSize="18sp" />
+
+ <LinearLayout
+     android:id="@+id/linearLayoutContent6"
+     android:layout_width="match_parent"
+     android:layout_height="40dp"
+     android:weightSum="6"
+     android:layout_below="@id/txtProfileName"
+     android:orientation="horizontal"
+     android:background="#ffff"
+     android:layout_marginTop="10dp"
+     android:layout_marginLeft="15dp"
+     android:layout_marginRight="15dp">
+
+  <TextView
+      android:id="@+id/txtProfilePhoneLabel"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:background="#ffff"
+      android:layout_marginStart="100dp"
+      android:layout_marginTop="5dp"
+      android:textColor="#000000"
+      android:text="+91-"
+      android:textSize="18sp" />
+
+
+  <TextView
+        android:id="@+id/txtProfilePhoneNo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:background="#ffff"
+        android:layout_marginTop="5dp"
+      android:textColor="#000000"
+        android:text="1115555555"
+        android:textSize="18sp" />
+
+ </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtProfileEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayoutContent6"
+        android:background="#ffff"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="#000000"
+        android:text="john_doe@gmail.com"
+        android:padding="8dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtProfileAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtProfileEmail"
+        android:background="#ffff"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="#000000"
+        android:text="Gurugram"
+        android:padding="8dp"
+        android:textSize="18sp" />
+
+</RelativeLayout>

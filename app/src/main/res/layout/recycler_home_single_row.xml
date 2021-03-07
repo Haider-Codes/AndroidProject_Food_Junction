@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffff"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="4dp">
+    
+    <LinearLayout
+        android:id="@+id/linearLayoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff"
+        android:orientation="horizontal"
+        android:weightSum="9">
+
+        <ImageView
+            android:id="@+id/imgRestaurant"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="3.2"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="5dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            android:padding="8dp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.8">
+
+            <TextView
+                android:id="@+id/txtNameOfRestaurant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name_of_restaurant"
+                android:padding="8dp"
+                android:textSize="20sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/txtPricePerPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtNameOfRestaurant"
+                android:drawableStart="@drawable/rupee"
+                android:text="@string/price"
+                android:layout_marginTop="35dp"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txtPerPersonLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNameOfRestaurant"
+                android:layout_toEndOf="@id/txtPricePerPerson"
+                android:text="@string/person"
+                android:textSize="18sp"
+                android:layout_marginTop="35dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imgAddToFavourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_favourite_asset"
+                android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/txtRestaurantRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgAddToFavourite"
+            android:layout_marginTop="20dp"
+            android:text="4.1"
+            android:textColor="#ffca28"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="4dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
